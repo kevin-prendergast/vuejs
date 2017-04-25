@@ -1,0 +1,37 @@
+{
+  "name": "vue-js",
+  "version": "1.0.0",
+  "description": "simple vue js",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build",
+    "dev": "webpack-dev-server --inline --hot --quiet --port 4000",
+    "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot --history-api-fallback --port 4000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevin-prendergast/vuejs.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "Kevin Prendergast",
+  "license": "MIT",
+  "homepage": "https://github.com/kevin-prendergast/vuejs#readme",
+  "dependencies": {
+    "vue": "^2.1.10"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "babel-runtime": "^5.8.25",
+    "css-loader": "^0.21.0",
+    "style-loader": "^0.13.0",
+    "template-html-loader": "0.0.3",
+    "vue-hot-reload-api": "^1.2.0",
+    "vue-html-loader": "^1.0.0",
+    "vue-loader": "^6.0.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
+  }
+}

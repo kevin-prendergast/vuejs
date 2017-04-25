@@ -1,0 +1,36 @@
+.wrap-list{
+	height: 85%;
+	padding: 20px 0px;
+	box-shadow: inset 0 0px 5px black;
+	border-radius: 0 0 10px 10px;
+	background-image: linear-gradient(transparent 97%, gray 100%);
+}
+
+input[type="checkbox"]{
+  position: relative;
+  top: 14px;
+  right: 12px;
+	float: right;
+}
+input[type="checkbox"]:checked + label{
+	text-decoration: line-through;
+	color: rgba(0,0,0,.3);
+}
+.list{
+	list-style: none;
+	color: rgba(0,0,0,.7);
+}
+.list li:nth-child(odd){
+	background: rgba(0,0,50,.1);
+}
+.list li{
+	float: left;
+	width: 100%;
+}
+label{
+  padding: 10px;
+	cursor: pointer;
+	float: left;
+	width: 95%;
+	transition: all .3s ease;
+}

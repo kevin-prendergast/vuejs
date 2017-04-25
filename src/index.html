@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Basic ToDo Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body class="container">
+    <h2>Todo list as component</h2>
+    <div id="todos-demo">
+      <todos-list></todos-list>
+    </div>
+
+    <h2>Filtering demo</h2>
+    <div id="filtering-demo">
+      <input type="text" v-model="searchText" class="form-control">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th v-for="column in columns">
+              <a href="#" @click="sortBy(column)"
+                v-bind:class="{ active: sortKey === column }">{{ column | capitalize }}</a>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="person in people">
+            <td>{{ person.name }}</td>
+            <td>{{ person.age }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="dist/build.js"></script>
+  </body>
+</html>
