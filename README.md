@@ -1,3 +1,3 @@
 # vuejs
 
-Very simple Vue.js application
+Very simple Vue.js todo application
